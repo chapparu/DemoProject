@@ -15,6 +15,10 @@ pipeline {
         booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run unit tests after build')
         string(name: 'PARAM1', defaultValue: 'default value1', description: 'test param1')
         string(name: 'PARAM2', defaultValue: 'default value2', description: 'test param2')
+        string(name: 'PARAM3', defaultValue: 'default value1', description: 'test param3')
+        string(name: 'PARAM4', defaultValue: 'default value2', description: 'test param4')
+        string(name: 'PARAM5', defaultValue: 'default value1', description: 'test param5')
+        string(name: 'PARAM6', defaultValue: 'default value2', description: 'test param6')
     }
 
     stages {
@@ -39,6 +43,10 @@ pipeline {
                     echo "RUN_TESTS: ${params.RUN_TESTS}"
                     echo "PARAM1: ${params.PARAM1}"
                     echo "PARAM2: ${params.PARAM2}"
+                    echo "PARAM3: ${params.PARAM3}"
+                    echo "PARAM4: ${params.PARAM4}"
+                    echo "PARAM5: ${params.PARAM5}"
+                    echo "PARAM6: ${params.PARAM6}"
                     // Example of building using Docker
                     // sh '''
                     //     docker build -t $DOCKER_IMAGE .
